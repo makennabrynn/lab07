@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            // Function to check Whether both passwords
+            // is same or not.
+            function checkPassword(form) {
+                password1 = form.password1.value;
+                password2 = form.password2.value;
+
+                // If password not entered
+                if (password1 == '')
+                    alert ("enter password");
+
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("enter 2nd password");
+
+                // If Not same return False.
+                else if (password1 != password2) {
+                    alert ("password doesn't match")
+                    return false;
+                }
+
+                // If same return True.
+                else{
+                    alert("password match :)")
+                    return true;
+                }
+            }
+        </script>
+        <style>
+            #header {
+                font-size:40px;
+                color:pink;
+                font-weight:bold;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "header">Password Verification</div><br>
+        <form onSubmit = "return checkPassword(this)">
+        <table border = 1 align = "center">
+            <tr>
+                <!-- Enter Password. -->
+                <td>Password:</td>
+                <td><input type = password name = password1 size = 25</td>
+            </tr>
+            <tr>
+                <!-- To Confirm Password. -->
+                <td>Confirm Password:</td>
+                <td><input type = password name = password2 size = 25></td>
+            </tr>
+            <tr>
+                <td colspan = 2 align = right>
+                <input type = submit value = "Submit"></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
